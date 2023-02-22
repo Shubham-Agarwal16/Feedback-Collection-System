@@ -12,19 +12,37 @@ class Header extends Component {
       case false:
         return (
           <li>
-            <a href="/auth/google">Login With Google</a>
+            <a
+              href="/auth/google"
+              className="button is-black has-text-weight-semibold has-text-white Ubuntu"
+            >
+              Login With Google
+            </a>
           </li>
         );
       default:
         return [
-          <li key="1">
+          <li
+            key="3"
+            style={{
+              display: "inline-block",
+              margin: "0 10px",
+            }}
+          >
+            <span className="tag is-success is-large is-light">
+              Credits:{this.props.auth.credits}
+            </span>
+          </li>,
+          <li key="1" style={{ display: "inline-block", margin: "0 10px" }}>
             <Payments />
           </li>,
-          <li key="3" style={{ margin: "0 10px" }}>
-            Credits:{this.props.auth.credits}
-          </li>,
-          <li key="2">
-            <a href="/api/logout">Logout</a>
+          <li key="2" style={{ display: "inline-block", margin: "0 10px" }}>
+            <a
+              href="/api/logout"
+              className="button is-black has-text-weight-semibold has-text-white Ubuntu"
+            >
+              Logout
+            </a>
           </li>,
         ];
     }
@@ -32,17 +50,24 @@ class Header extends Component {
 
   render() {
     return (
-      <nav>
-        <div className="nav-wrapper blue lighten-2">
-          <Link
-            to={this.props.auth ? "/surveys" : "/"}
-            className="left brand-logo"
-          >
-            Emaily
-          </Link>
-          <ul className="right">{this.renderContent()}</ul>
+      <div className="navbar">
+        <div className="navbar-brand">
+          <div className="navbar-item is-family-primary has-text-weight-semibold is-size-3">
+            <Link
+              to={this.props.auth ? "/surveys" : "/"}
+              className="has-text-black is-family-monospace"
+            >
+              Emaily
+            </Link>
+          </div>
         </div>
-      </nav>
+        <div className="navbar-end"></div>
+        <div className="navbar-item">
+          <div>
+            <ul style={{ alignItems: "bottom" }}>{this.renderContent()}</ul>
+          </div>
+        </div>
+      </div>
     );
   }
 }
@@ -52,3 +77,17 @@ function mapStateToProps({ auth }) {
 }
 
 export default connect(mapStateToProps)(Header);
+
+/* <div className="columns">
+        <div className="column is-fifth">
+          <div className="">
+            <Link to={this.props.auth ? "/surveys" : "/"}>Emaily</Link>
+          </div>
+        </div>
+        <div className="column"></div>
+        <div className="column is-2">
+          <div className="buttons">
+            <ul className="button is-black">{this.renderContent()}</ul>
+          </div>
+        </div>
+      </div> */

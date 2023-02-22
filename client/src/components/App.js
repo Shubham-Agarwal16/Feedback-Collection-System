@@ -17,9 +17,9 @@ class App extends Component {
     return (
       <div className="container">
         <BrowserRouter>
-          <div className="container">
-            <Header />
+          <div className="hero">
             <Route exact path="/" component={Landing} />
+            <Route exact path="/surveys" component={Header} />
             <Route exact path="/surveys" component={Dashboard} />
             <Route path="/surveys/new" component={SurveyNew} />
           </div>
@@ -30,3 +30,5 @@ class App extends Component {
 }
 
 export default connect(null, actions)(App);
+
+//  <Header />
