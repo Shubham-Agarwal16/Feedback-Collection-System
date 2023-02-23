@@ -7,6 +7,7 @@ const Landing = () => {
         <span
           className="title is-2 has-text-weight-bold"
           style={{
+            fontSize: "50px",
             fontFamily: "Permanent Marker",
             display: "table",
             margin: "0 auto",
@@ -55,12 +56,14 @@ const Landing = () => {
           <div className="column"></div>
         </div>
         <div className="column">
+          <div className="column"></div>
+          <div className="column"></div>
           <img
             className=""
             src="/landing-6.jpg"
             alt="landing image"
             style={{
-              height: "700px",
+              height: "600px",
             }}
           />
         </div>
