@@ -29,8 +29,8 @@ class Header extends Component {
               margin: "0 10px",
             }}
           >
-            <span className="tag is-success is-large is-light">
-              Credits:{this.props.auth.credits}
+            <span className="button tag is-primary is-large">
+              Credits : {this.props.auth.credits}
             </span>
           </li>,
           <li key="1" style={{ display: "inline-block", margin: "0 10px" }}>
@@ -63,9 +63,7 @@ class Header extends Component {
         </div>
         <div className="navbar-end"></div>
         <div className="navbar-item">
-          <div>
-            <ul style={{ alignItems: "bottom" }}>{this.renderContent()}</ul>
-          </div>
+          <ul>{this.renderContent()}</ul>
         </div>
       </div>
     );
