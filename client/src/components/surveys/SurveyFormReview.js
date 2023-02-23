@@ -8,27 +8,32 @@ import * as actions from "../../actions/index";
 const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
   const reviewFields = _.map(formFields, ({ name, label }) => {
     return (
-      <div key={name}>
-        <label>{label}</label>
+      <div className="field" key={name}>
+        <label className="label is-medium">{label}</label>
         <div>{formValues[name]}</div>
       </div>
     );
   });
 
   return (
-    <div>
-      <h5>Please confirm your entries</h5>
-      {reviewFields}
-      <button className="yellow darken-3 white btn-flat" onClick={onCancel}>
-        Back
-      </button>
-      <button
-        onClick={() => submitSurvey(formValues, history)}
-        className="green btn-flat right"
-      >
-        Send Survey
-        <i className="material-icons right">email</i>
-      </button>
+    <div className="hero-body">
+      <div className="column">
+        <p className="title is-3">Please confirm your entries</p>
+      </div>
+      <div className="box">
+        {reviewFields}
+        <div className="buttons">
+          <button className="button is-warning" onClick={onCancel}>
+            Back
+          </button>
+          <button
+            onClick={() => submitSurvey(formValues, history)}
+            className="button is-success"
+          >
+            Send Survey
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

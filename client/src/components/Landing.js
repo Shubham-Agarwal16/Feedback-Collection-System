@@ -8,7 +8,7 @@ const Landing = () => {
           className="title is-2 has-text-weight-bold"
           style={{
             fontSize: "50px",
-            fontFamily: "Permanent Marker",
+            fontFamily: "Gloock",
             display: "table",
             margin: "0 auto",
           }}

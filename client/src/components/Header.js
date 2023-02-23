@@ -52,12 +52,12 @@ class Header extends Component {
     return (
       <div className="navbar">
         <div className="navbar-brand">
-          <div className="navbar-item is-family-primary has-text-weight-semibold is-size-3">
+          <div className="navbar-item " >
             <Link
               to={this.props.auth ? "/surveys" : "/"}
-              className="has-text-black is-family-monospace"
+              className="title is-2 has-text-weight-bold"
             >
-              Emaily
+            <span style={{fontFamily:"Gloock"}}>Emaily</span>
             </Link>
           </div>
         </div>
@@ -88,4 +88,5 @@ export default connect(mapStateToProps)(Header);
             <ul className="button is-black">{this.renderContent()}</ul>
           </div>
         </div>
+        is-family-primary has-text-weight-semibold is-size-3
       </div> */

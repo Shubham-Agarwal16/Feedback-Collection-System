@@ -2,10 +2,11 @@ import React from "react";
 
 export default ({ input, label, meta: { error, touched } }) => {
   return (
-    <div>
-      <label>{label}</label>
-      <input {...input} style={{ marginBottom: "5px" }} />
-      <div className="red-text" style={{ marginBottom: "20px" }}>
+    <div className="field">
+      <label className="label is-medium">{label}</label>
+      <div className="control"></div>
+      <input {...input} className="input is-medium" style={{ marginBottom: "5px" }} />
+      <div className="has-text-danger" style={{ marginBottom: "20px" }}>
         {touched && error}
       </div>
     </div>
