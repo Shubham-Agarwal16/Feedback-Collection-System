@@ -54,8 +54,6 @@ const Landing = () => {
           <div className="column"></div>
         </div>
         <div className="column">
-          <div className="column"></div>
-          <div className="column"></div>
           <img
             className=""
             src="/landing-6.jpg"
