@@ -25,8 +25,6 @@ const Landing = () => {
           <div className="column"></div>
           <div className="column"></div>
           <div className="column"></div>
-          <div className="column"></div>
-          <div className="column"></div>
           <p style={{ fontFamily: "Permanent Marker", fontSize: "2.9rem" }}>
             Feedback Collection System
           </p>
