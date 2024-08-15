@@ -57,7 +57,7 @@ const Landing = () => {
           <img
             className=""
             src="/landing-6.jpg"
-            alt="landing image"
+            alt="landing"
             style={{
               height: "600px",
             }}
